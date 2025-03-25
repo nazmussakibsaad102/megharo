@@ -1,7 +1,3 @@
-Here’s a project description for your Git repository:
-
----
-
 # Flame Bird Game
 
 This is a simple 2D game built using the **Flame** game engine in Flutter. The player controls a bird that must fly and dodge obstacles. The bird has an animation for flying, and the player can tap the screen to make the bird jump. Obstacles randomly spawn from the top or bottom of the screen and move toward the bird. The player needs to avoid hitting these obstacles to stay alive. If the bird collides with any obstacles, the game ends.
