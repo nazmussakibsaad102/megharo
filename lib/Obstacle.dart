@@ -7,22 +7,20 @@ import 'package:flame/components.dart';
 import 'package:flame/flame.dart';
 import 'package:flame/sprite.dart';
 
+import 'dart:math' as math;
+
 class Obstacle extends SpriteComponent with CollisionCallbacks {
-
-
-  @override
-  Future<void> onLoad() async {
-    sprite = await Sprite.load('ball.png');
-
-  }
-
   Obstacle() : super(size: Vector2(50, 100)) {
     final random = math.Random();
     final isTopObstacle = random.nextBool();
     position = Vector2(400, isTopObstacle ? 0 : 300 + random.nextDouble() * 100);
-    angle = isTopObstacle ? 3.14 : 0; // Flip the sprite if needed
-    size = Vector2(50, 100);
-    position = Vector2(400, (100 + (300 * (math.Random().nextDouble()))));
+    angle = isTopObstacle ? 3.14 : 0;
+  }
+
+  @override
+  Future<void> onLoad() async {
+    sprite = await Sprite.load('ball.png');
+    add(RectangleHitbox());
   }
 
   @override

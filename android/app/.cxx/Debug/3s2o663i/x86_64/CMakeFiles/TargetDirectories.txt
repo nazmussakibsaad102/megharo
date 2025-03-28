@@ -1,0 +1,2 @@
+C:/Users/abc/StudioProjects/megharo/android/app/.cxx/Debug/3s2o663i/x86_64/CMakeFiles/edit_cache.dir
+C:/Users/abc/StudioProjects/megharo/android/app/.cxx/Debug/3s2o663i/x86_64/CMakeFiles/rebuild_cache.dir

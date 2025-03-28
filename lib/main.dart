@@ -1,6 +1,11 @@
-import 'package:flame/game.dart';
 import 'package:flutter/material.dart';
-import 'BirdGamePage.dart';
+import 'GamePage.dart';
+
 void main() {
-  runApp(GameWidget(game: BirdGame()));
+  runApp(
+    MaterialApp(
+      debugShowCheckedModeBanner: false, // Optional
+      home: GamePage(),
+    ),
+  );
 }
