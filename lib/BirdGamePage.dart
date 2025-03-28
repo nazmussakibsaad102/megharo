@@ -1,8 +1,9 @@
 import 'package:flame/components.dart';
 import 'package:flame/game.dart';
 import 'package:flame/input.dart';
-import 'Bird.dart';
-import 'Obstacle.dart';
+
+import 'Characters/Bird.dart';
+import 'Characters/Obstacle.dart';
 
 
 class BirdGame extends FlameGame with HasCollisionDetection, TapDetector {

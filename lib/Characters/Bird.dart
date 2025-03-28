@@ -1,7 +1,6 @@
-
 import 'package:flame/collisions.dart';
 import 'package:flame/components.dart';
-import 'BirdGamePage.dart';
+import '../BirdGamePage.dart';
 import 'Obstacle.dart';
 
 class Bird extends SpriteAnimationComponent with CollisionCallbacks , HasGameRef<BirdGame>{
@@ -32,7 +31,6 @@ class Bird extends SpriteAnimationComponent with CollisionCallbacks , HasGameRef
   @override
   void onCollision(Set<Vector2> intersectionPoints, PositionComponent other) {
     if (other is Obstacle) {
-      print("Collision detected with Obstacle!");
       gameRef.gameOver();
     }
 
