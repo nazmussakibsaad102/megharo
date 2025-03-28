@@ -4,7 +4,7 @@ import 'GamePage.dart';
 void main() {
   runApp(
     MaterialApp(
-      debugShowCheckedModeBanner: false, // Optional
+      debugShowCheckedModeBanner: false,
       home: GamePage(),
     ),
   );
