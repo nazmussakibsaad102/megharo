@@ -1,8 +1,10 @@
 
 import 'package:flame/collisions.dart';
 import 'package:flame/components.dart';
+import 'BirdGamePage.dart';
+import 'Obstacle.dart';
 
-class Bird extends SpriteAnimationComponent with CollisionCallbacks {
+class Bird extends SpriteAnimationComponent with CollisionCallbacks , HasGameRef<BirdGame>{
   double velocityY = 0;
   final double gravity = 500;
   final double jumpForce = -200;
@@ -22,7 +24,21 @@ class Bird extends SpriteAnimationComponent with CollisionCallbacks {
     ];
 
     animation = SpriteAnimation.spriteList(imagesList, stepTime: 0.1);
+
+    add(RectangleHitbox());
   }
+
+
+  @override
+  void onCollision(Set<Vector2> intersectionPoints, PositionComponent other) {
+    if (other is Obstacle) {
+      print("Collision detected with Obstacle!");
+      gameRef.gameOver();
+    }
+
+    super.onCollision(intersectionPoints, other);
+  }
+
 
 
   void fly() {
